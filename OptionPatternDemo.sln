@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptionPatternDemo", "OptionPatternDemo\OptionPatternDemo.csproj", "{A9D7F4F0-E2AD-4A4E-9DA3-7D7446528CC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BD75D2E1-DDA1-44D2-A640-5669990136CA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9D7F4F0-E2AD-4A4E-9DA3-7D7446528CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D7F4F0-E2AD-4A4E-9DA3-7D7446528CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D7F4F0-E2AD-4A4E-9DA3-7D7446528CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D7F4F0-E2AD-4A4E-9DA3-7D7446528CC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {597AB81B-79A6-4304-9B0B-CDA043E9132D}
+	EndGlobalSection
+EndGlobal
