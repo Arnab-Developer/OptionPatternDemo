@@ -29,9 +29,9 @@ namespace OptionPatternDemo.Controllers
         {
             for (int i = 0; i < 20; i++)
             {
-                string name1 = _optionsMonitor.CurrentValue.Name; // Get the updated value
-                string name2 = _options.Value.Name; // Get the old value
-                string name3 = _optionsSnapshot.Value.Name; // Get the updated value if it is a new request
+                string name1 = _optionsMonitor.CurrentValue.Name; // Always return the new value
+                string name2 = _options.Value.Name; // Always return the old value until the app is restarted
+                string name3 = _optionsSnapshot.Value.Name; // Return the new value if it is a new request
             }
             return RedirectToAction(nameof(Privacy));
         }
@@ -40,9 +40,9 @@ namespace OptionPatternDemo.Controllers
         {
             for (int i = 0; i < 5; i++)
             {
-                string name1 = _optionsMonitor.CurrentValue.Name; // Get the updated value
-                string name2 = _options.Value.Name; // Get the old value
-                string name3 = _optionsSnapshot.Value.Name; // Get the updated value if it is a new request
+                string name1 = _optionsMonitor.CurrentValue.Name; // Always return the new value
+                string name2 = _options.Value.Name; // Always return the old value until the app is restarted
+                string name3 = _optionsSnapshot.Value.Name; // Return the new value if it is a new request
             }
             return View();
         }

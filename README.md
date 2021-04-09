@@ -1,46 +1,21 @@
-# EF Migrations demo
+# ASP.NET option pattern demo
 
-An example ASP.NET application with EF Migrations following below doc
+This is a demo app to show the difference between `IOptionsMonitor`, `IOptions`
+and `IOptionsSnapshot`.
 
-https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli
+- IOptionsMonitor: always return the new value
+- IOptions: always return the old value until the app is restarted
+- IOptionsSnapshot: return the new value if it is a new request
 
-I have used two databases for this app. One is for dev env and another is for prd env. To create and 
-update dev database, I have used EF Migrations (add migrations and update database). To create and 
-update prd database, I have generated script through EF Migrations and executed in prd database during
-the deployment.
-
-## Initial create
-
-For dev env
-
-```
-dotnet ef migrations add InitialCreate
-
-dotnet ef database update
+```c#
+string name1 = _optionsMonitor.CurrentValue.Name;
+string name2 = _options.Value.Name;
+string name3 = _optionsSnapshot.Value.Name;
 ```
 
-For prd env
+For more information about ASP.NET option pattern, please read 
+[this doc](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options?view=aspnetcore-5.0).
 
-```
-dotnet ef migrations script
-```
+## Tech stack
 
-Copy the generated script from terminal and executed in prd database.
-
-## Add student subject
-
-For dev env
-
-```
-dotnet ef migrations add AddStudentSubject
-
-dotnet ef database update
-```
-
-For prd env
-
-```
-dotnet ef migrations script InitialCreate
-```
-
-Copy the generated script from terminal and executed in prd database.
+Visual Studio 2019 and ASP.NET 5
